@@ -6,8 +6,9 @@
 			<root-layout width="1920" height="1080" backgroundColor="#18182c" />
 
 			<!-- define the screen layout zones in relative % -->
-			<region regionName="top-left" left="0" top="0" width="80%" height="80%" z-index="2" backgroundColor="#fdc400"/>
-			<region regionName="top-right" left="50%" top="0" width="50%" height="50%" z-index="1" backgroundColor="#fdc400"/>
+			<region regionName="top-left" left="0" top="0" width="50%" height="50%" z-index="1" backgroundColor="#fdc400"/>
+			<region regionName="bottom-left" left="0" top="50%" width="50%" height="50%" z-index="1" backgroundColor="#fdc400"/>
+			<region regionName="right" left="20%" top="0%" width="80%" height="100%" z-index="1" backgroundColor="#fdc400"/>
 		</layout>
 	</head>
 	<body>
@@ -45,8 +46,15 @@
 				<par>
 					<!-- indefinite loop of media files in the selected order -->
 					<seq repeatCount="indefinite">
-						<video src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape2.mp4" region="top-right" soundLevel="0%"></video>
-						<img dur="5s" src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape2.jpg" region="top-right" fit="fill"></img>
+						<video src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape2.mp4" region="bottom-left" soundLevel="0%"></video>
+						<img dur="5s" src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape2.jpg" region="bottom-left" fit="fill"></img>
+					</seq>
+				</par>
+
+				<par>
+					<!-- indefinite loop of media files in the selected order -->
+					<seq repeatCount="indefinite">
+						<ref src="https://www.signageos.io" region="right" type="text/html" dur="indefinite" />
 					</seq>
 				</par>
 			</par>
