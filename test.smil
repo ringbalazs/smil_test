@@ -8,7 +8,7 @@
 			<!-- define the screen layout zones in relative % -->
 			<region regionName="top-left" left="0" top="0" width="50%" height="50%" z-index="2" backgroundColor="#fdc400"/>
 			<region regionName="bottom-left" left="0" top="50%" width="50%" height="50%" z-index="2" backgroundColor="#fdc400"/>
-			<region regionName="right" left="20%" top="0%" width="80%" height="100%" z-index="1" backgroundColor="#fdc400"/>
+			<region regionName="right" left="20%" top="0%" width="80%" height="100%" z-index="5" backgroundColor="#fdc400"/>
 		</layout>
 	</head>
 	<body>
