@@ -1,0 +1,38 @@
+<smil>
+	<head>
+		<meta http-equiv="refresh" content="20"/>
+		<layout>
+			<!-- define the screen resolution -->
+			<root-layout width="1920" height="1080" backgroundColor="#18182c" />
+
+			<!-- define the screen layout, in this case single fullscreen zone -->
+			<region regionName="main" left="0" top="0" width="1920" height="1080" z-index="1" backgroundColor="#18182c"/>
+		</layout>
+	</head>
+	<body>
+		<par>
+
+			<!-- Downloading resources into the internal storage -->
+			<seq>
+				<prefetch src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape1.mp4" />
+				
+
+				<seq id="__prefetchEnd" dur="1s" />
+			</seq>
+
+
+			 <seq repeatCount="indefinite">
+ 				       <ref src="https://codepen.io/ring-balazs1982/pen/zYzBymB" region="main" type="text/html" dur="indefinite" />
+      			</seq>
+			<!-- Wait for the prefetch of media files, once done, start the playback -->
+			<par begin="__prefetchEnd.endEvent" repeatCount="indefinite">
+
+				<!-- indefinite loop of media files in the selected order -->
+				<seq repeatCount="indefinite">
+					<video src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape1.mp4" region="main" soundLevel="0%"></video>
+					
+				</seq>
+			</par>
+		</par>
+	</body>
+</smil>
