@@ -14,22 +14,19 @@
 
 			<!-- Downloading resources into the internal storage -->
 			<seq>
-				<prefetch src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape1.mp4" />
-				
-
+				<prefetch src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_30MB.mp4" />
 				<seq id="__prefetchEnd" dur="1s" />
 			</seq>
-
-
 			 <seq repeatCount="indefinite">
- 				       <ref src="https://codepen.io/ring-balazs1982/pen/zYzBymB" region="main" type="text/html" dur="indefinite" />
+ 				       <ref src="https://codepen.io/ring-balazs1982/full/zYzBymB" region="main" type="text/html" dur="indefinite" />
       			</seq>
+			
 			<!-- Wait for the prefetch of media files, once done, start the playback -->
 			<par begin="__prefetchEnd.endEvent" repeatCount="indefinite">
 
 				<!-- indefinite loop of media files in the selected order -->
 				<seq repeatCount="indefinite">
-					<video src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/samples/assets/landscape1.mp4" region="main" soundLevel="0%"></video>
+					<video src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_30MB.mp4" region="main" soundLevel="0%"></video>
 					
 				</seq>
 			</par>
